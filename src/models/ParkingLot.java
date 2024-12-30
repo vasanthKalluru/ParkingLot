@@ -1,5 +1,8 @@
 package models;
 
+import strategies.SpotAssignmentStrategy;
+
+
 import java.util.List;
 
 public class ParkingLot extends BaseModel{
@@ -7,8 +10,8 @@ public class ParkingLot extends BaseModel{
     private List<Gate> gates;
     private List<VehicleType> vehicleTypes;
     private ParkingLotStatus parkingLotStatus;
-    private SpotAssignmentStrategy spotAssignmentStrategy;
-    private FeeCalculatorStrategy feeCalculatorStrategy;
+    private SpotAssignmentstrategyType spotAssignmentStrategyType;
+    private FeesCalculatorStrategyType feeCalculatorStrategyType;
 
     public List<ParkingFloor> getParkingFloors() {
         return parkingFloors;
@@ -30,7 +33,7 @@ public class ParkingLot extends BaseModel{
         return vehicleTypes;
     }
 
-    public void setVechicleTypes(List<VehicleType> vehicleTypes) {
+    public void setVehicleTypes(List<VehicleType> vehicleTypes) {
         this.vehicleTypes = vehicleTypes;
     }
 
@@ -42,19 +45,19 @@ public class ParkingLot extends BaseModel{
         this.parkingLotStatus = parkingLotStatus;
     }
 
-    public SpotAssignmentStrategy getSpotAssignmentStrategy() {
-        return spotAssignmentStrategy;
+    public SpotAssignmentstrategyType getSpotAssignmentStrategyType() {
+        return spotAssignmentStrategyType;
     }
 
-    public void setSpotAssignmentStrategy(SpotAssignmentStrategy spotAssignmentStrategy) {
-        this.spotAssignmentStrategy = spotAssignmentStrategy;
+    public void setSpotAssignmentStrategyType(SpotAssignmentstrategyType spotAssignmentStrategyType) {
+        this.spotAssignmentStrategyType = spotAssignmentStrategyType;
     }
 
-    public FeeCalculatorStrategy getFeeCalculatorStrategy() {
-        return feeCalculatorStrategy;
+    public FeesCalculatorStrategyType getFeeCalculatorStrategyType() {
+        return feeCalculatorStrategyType;
     }
 
-    public void setFeeCalculatorStrategy(FeeCalculatorStrategy feeCalculatorStrategy) {
-        this.feeCalculatorStrategy = feeCalculatorStrategy;
+    public void setFeeCalculatorStrategyType(FeesCalculatorStrategyType feeCalculatorStrategyType) {
+        this.feeCalculatorStrategyType = feeCalculatorStrategyType;
     }
 }
